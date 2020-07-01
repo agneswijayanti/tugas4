@@ -10,10 +10,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', 'HomeController@home');
-Route::get('/register', 'AuthController@register');
-Route::post('/welcome', 'AuthController@welcome');
-Route::get('/welcome', 'AuthController@welcome');
+Route::get('/', function(){
+    return view('adminlte.index');
+});
+Route::get('/data-tables', function(){
+    return view('adminlte.data_tables');
+});
 
 
 
