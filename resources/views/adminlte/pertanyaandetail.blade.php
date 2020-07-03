@@ -15,11 +15,11 @@
             <th>Isi</th>
             <th>Tanggal Dibuat</th>
             <th>Tanggal Diperbarui</th>
-            <th>Action</th>
           </tr>
           </thead>
           <tbody>
-        <?php $no=0; ?>
+         
+         <?php $no=0; ?>
           @foreach($pertanyaan as $p)
        <?php $no++; ?>
 		   
@@ -30,22 +30,17 @@
             <td>{{$p->isi}}</td>
             <td>{{$p->tgl_dibuat}}</td>
             <td>{{$p->tgl_diperbarui}}</td>
-            <td>
-    
-    <form method="POST" action="/pertanyaan/{{$p->idpertanyaan}}">
-        {{ csrf_field() }}
-        {{ method_field('DELETE') }}
-
-        <div class="form-group">
-            <input type="submit" class="btn btn-danger delete-user" value="Delete">
-        </div>
-    </form>
-</td>
           </tr>
           @endforeach         
-          </tbody>
+          </tbody> -->
          
         </table>
+        <h3>jawaban</h3>
+        <ul>
+            @foreach($jawaban as $c)
+            <li>{{$c->isi}}</li>
+            @endforeach
+        </ul>
       </div>
       <!-- /.card-body -->
     </div>
